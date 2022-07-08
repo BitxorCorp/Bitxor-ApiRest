@@ -13,17 +13,8 @@
     "test:travis": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint src test",
     "lint:fix": "eslint src test --fix",
-    "lint:jenkins": "eslint -o tests.bitxorcore.lint.xml -f junit src test || exit 0",
-    "bootstrap-clean": "bitxor-bootstrap clean",
-    "bootstrap-start": "bitxor-bootstrap start -a light -c bootstrap-preset-local.yml --healthCheck --noPassword",
-    "bootstrap-start-testnet": "bitxor-bootstrap start -p testnet -a dual -c bootstrap-preset-testnet.yml --healthCheck --noPassword --upgrade",
-    "bootstrap-start-mainnet": "bitxor-bootstrap start -p testnet -a dual -c bootstrap-preset-mainnet.yml --healthCheck --noPassword --upgrade",
-    "bootstrap-start-detached": "bitxor-bootstrap start -a light -c bootstrap-preset.yml --detached --healthCheck --noPassword --upgrade",
-    "bootstrap-stop": "bitxor-bootstrap stop",
-    "bootstrap-run": "bitxor-bootstrap run",
-    "bootstrap-run-detached": "bitxor-bootstrap run --detached --healthCheck",
-    "bootstrap-compose": "bitxor-bootstrap compose",
-    "bootstrap-config": "bitxor-bootstrap config -a light -c bootstrap-preset.yml"
+    "lint:jenkins": "eslint -o tests.bitxorcore.lint.xml -f junit src test || exit 0"
+    
   },
   "keywords": [],
   "author": "",
@@ -45,8 +36,7 @@
     "nodemon": "^2.0.6",
     "nyc": "^14.1.1",
     "rimraf": "^2.6.3",
-    "sinon": "^7.3.2",
-    "bitxor-bootstrap": "git+http://gitlab.local.bitxor.org/bitxor-nodejs-sdk/bitxor-bootstrap.git#main"
+    "sinon": "^7.3.2"
   },
   "dependencies": {
     "bitxorcore-sdk": "link:../bitxorcore-sdk",
