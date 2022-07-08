@@ -1,0 +1,95 @@
+{
+  "network": {
+    "name": "mainnet",
+    "description": "Bitxor Network"
+  },
+
+  "port": 3001,
+  "protocol": "HTTPS",
+  "sslKeyPath": "/root/BitxorCore/cert/ssl.bin",
+  "sslCertificatePath": "/root/BitxorCore/cert/ssl.crt",
+  "crossDomain": {
+    "allowedHosts": ["*"],
+    "allowedMethods": ["GET", "POST", "PUT", "OPTIONS"]
+  },
+  "uncirculatingAccountPublicKeys": [],
+  "extensions": [
+    "accountLink",
+    "aggregate",
+    "lockHash",
+    "lockSecret",
+    "token",
+    "metadata",
+    "multisig",
+    "namespace",
+    "receipts",
+    "restrictions",
+    "transfer"
+  ],
+
+  "db": {
+    "url": "mongodb://localhost:27017/",
+    "name": "bitxorcore",
+    "pageSizeMin": 10,
+    "pageSizeMax": 100,
+    "pageSizeDefault": 20,
+    "maxConnectionAttempts": 5,
+    "baseRetryDelay": 500,
+    "connectionPoolSize": 10
+  },
+
+  "apiNode": {
+    "host": "127.0.0.1",
+    "port": 7900,
+    "timeout": 1000,
+    "tlsClientCertificatePath": "/root/BitxorCore/cert/node.crt.pem",
+    "tlsClientKeyPath": "/root/BitxorCore/cert/node.key.pem",
+    "tlsCaCertificatePath": "/root/BitxorCore/cert/ca.cert.pem",
+    "networkPropertyFilePath": "/root/BitxorCore/resources/config-network.properties",
+    "nodePropertyFilePath": "/root/BitxorCore/resources/config-node.properties"
+  },
+
+  "websocket": {
+    "mq": {
+      "host": "127.0.0.1",
+      "port": 7902,
+      "monitorInterval": 500,
+      "connectTimeout": 10000,
+      "monitorLoggingThrottle": 60000,
+      "maxSubscriptions": 500
+    },
+    "allowOptionalAddress": true
+  },
+
+  "throttling": {
+    "burst": 20,
+    "rate": 500
+  },
+
+  "logging": {
+    "console": {
+      "formats": ["colorize", "simple"],
+
+      "level": "verbose",
+      "handleExceptions": true
+    },
+    "file": {
+      "formats": ["prettyPrint"],
+
+      "level": "verbose",
+      "handleExceptions": true,
+
+      "filename": "bitxor-rest.log",
+      "maxsize": 20971520,
+      "maxFiles": 100
+    }
+  },
+
+  "numBlocksTransactionFeeStats": 300,
+
+  "deployment": {
+    "deploymentTool": "",
+    "deploymentToolVersion": "",
+    "lastUpdatedDate": ""
+  }
+}

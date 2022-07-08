@@ -7,7 +7,7 @@
     "version": "echo $npm_package_version",
     "start": "node src/index.js resources/rest.json",
     "start:ssl": "node src/index.js resources/restssl.json",
-    "start:dev": "nodemon src/index.js target/gateways/rest/rest.json",
+    "start:dev": "nodemon src/index.js resources/restDEV.json",
     "test": "mocha --full-trace --recursive",
     "test:coverage": "nyc npm test && nyc report --reporter=text-lcov",
     "test:jenkins": "cross-env JUNIT_REPORT_PATH=test-results.xml mocha --reporter mocha-jenkins-reporter --mongoHost db --forbid-only --full-trace --recursive test || exit 0",
