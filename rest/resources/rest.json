@@ -1,21 +1,18 @@
 {
   "network": {
-    "name": "testnet",
-    "description": "bitxorcore public test network"
+    "name": "mainnet",
+    "description": "Bitxor Network"
   },
 
   "port": 3000,
-  "protocol": "HTTPS",
-  "sslKeyPath": "",
-  "sslCertificatePath": "",
+  "protocol": "HTTP",
+  "sslKeyPath": "/root/BitxorCore/cert/ssl.bin",
+  "sslCertificatePath": "/root/BitxorCore/cert/ssl.crt",
   "crossDomain": {
     "allowedHosts": ["*"],
     "allowedMethods": ["GET", "POST", "PUT", "OPTIONS"]
   },
-  "uncirculatingAccountPublicKeys": [
-    "A4739036FD7EFED2750A51EE9D1D3113BA3F9849E0889213CED7F221B2AA1A20",
-    "2BF1E1F3072E3BE0CD851E4741E101E33DB19C163895F69AA890E7CF177C878C"
-  ],
+  "uncirculatingAccountPublicKeys": [],
   "extensions": [
     "accountLink",
     "aggregate",
@@ -45,11 +42,11 @@
     "host": "127.0.0.1",
     "port": 7900,
     "timeout": 1000,
-    "tlsClientCertificatePath": "/",
-    "tlsClientKeyPath": "/",
-    "tlsCaCertificatePath": "/",
-    "networkPropertyFilePath": "/",
-    "nodePropertyFilePath": "/"
+    "tlsClientCertificatePath": "/root/BitxorCore/cert/node.crt.pem",
+    "tlsClientKeyPath": "/root/BitxorCore/cert/node.key.pem",
+    "tlsCaCertificatePath": "/root/BitxorCore/cert/ca.cert.pem",
+    "networkPropertyFilePath": "/root/BitxorCore/resources/config-network.properties",
+    "nodePropertyFilePath": "/root/BitxorCore/resources/config-node.properties"
   },
 
   "websocket": {
@@ -66,7 +63,7 @@
 
   "throttling": {
     "burst": 20,
-    "rate": 5
+    "rate": 500
   },
 
   "logging": {
@@ -82,7 +79,7 @@
       "level": "verbose",
       "handleExceptions": true,
 
-      "filename": "bitxorcore-rest.log",
+      "filename": "bitxor-rest.log",
       "maxsize": 20971520,
       "maxFiles": 100
     }
