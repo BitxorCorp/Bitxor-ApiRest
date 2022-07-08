@@ -44,7 +44,7 @@
     "timeout": 1000,
     "tlsClientCertificatePath": "/root/BitxorCore/cert/node.crt.pem",
     "tlsClientKeyPath": "/root/BitxorCore/cert/node.key.pem",
-    "tlsCaCertificatePath": "/root/BitxorCore/cert/ca.cert.pem",
+    "tlsCaCertificatePath": "/root/BitxorCore/cert/ca.crt.pem",
     "networkPropertyFilePath": "/root/BitxorCore/resources/config-network.properties",
     "nodePropertyFilePath": "/root/BitxorCore/resources/config-node.properties"
   },
