@@ -141,11 +141,11 @@ module.exports = {
 					effectiveChildNamespaceRentalFee:
 							uint64.toString(uint64.multiply(childNamespaceRentalFee, uint64MedianNetworkMultiplier)),
 					effectiveTokenRentalFee:
-							uint64.toString(uint64.multiply(tokenRentalFee, uint64MedianNetworkMultiplier))
+							uint64.toString(uint64.multiply(tokenRentalFee, uint64MedianNetworkMultiplier)),
 					effectiveRootNamespaceEternalFee:
-							uint64.toString(uint64.multiply(rootNamespaceEternalFee, uint64MedianNetworkMultiplier))
+							uint64.toString(uint64.multiply(rootNamespaceEternalFee, uint64MedianNetworkMultiplier)),
 					effectiveIsoCodeNamespaceRentalFee:
-							uint64.toString(uint64.multiply(isoCodeNamespaceRentalFee, uint64MedianNetworkMultiplier))
+							uint64.toString(uint64.multiply(isoCodeNamespaceRentalFee, uint64MedianNetworkMultiplier)),
 					effectiveUnlinkTokenAliasRentalFee:
 							uint64.toString(uint64.multiply(unlinkTokenAliasRentalFee, uint64MedianNetworkMultiplier))
 				});
