@@ -105,6 +105,21 @@ module.exports = {
 				propertiesObject['plugin:bitxorcore'].plugins.namespace.rootNamespaceRentalFeePerBlock
 			));
 
+			// rootNamespaceEternalFee -> uint64
+			const rootNamespaceEternalFee = uint64.fromString(sanitizeInput(
+				propertiesObject['plugin:bitxorcore'].plugins.namespace.rootNamespaceEternalFee
+			));
+
+			// isoCodeNamespaceRentalFee -> uint64
+			const isoCodeNamespaceRentalFee = uint64.fromString(sanitizeInput(
+				propertiesObject['plugin:bitxorcore'].plugins.namespace.isoCodeNamespaceRentalFee
+			));
+
+			// unlinkTokenAliasRentalFee -> uint64
+			const unlinkTokenAliasRentalFee = uint64.fromString(sanitizeInput(
+				propertiesObject['plugin:bitxorcore'].plugins.namespace.unlinkTokenAliasRentalFee
+			));
+
 			// childNamespaceRentalFee -> uint64
 			const childNamespaceRentalFee = uint64.fromString(sanitizeInput(
 				propertiesObject['plugin:bitxorcore'].plugins.namespace.childNamespaceRentalFee
@@ -127,6 +142,12 @@ module.exports = {
 							uint64.toString(uint64.multiply(childNamespaceRentalFee, uint64MedianNetworkMultiplier)),
 					effectiveTokenRentalFee:
 							uint64.toString(uint64.multiply(tokenRentalFee, uint64MedianNetworkMultiplier))
+					effectiveRootNamespaceEternalFee:
+							uint64.toString(uint64.multiply(rootNamespaceEternalFee, uint64MedianNetworkMultiplier))
+					effectiveIsoCodeNamespaceRentalFee:
+							uint64.toString(uint64.multiply(isoCodeNamespaceRentalFee, uint64MedianNetworkMultiplier))
+					effectiveUnlinkTokenAliasRentalFee:
+							uint64.toString(uint64.multiply(unlinkTokenAliasRentalFee, uint64MedianNetworkMultiplier))
 				});
 				next();
 			});
