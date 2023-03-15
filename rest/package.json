@@ -8,6 +8,7 @@
     "start": "node src/index.js resources/rest.json",
     "start:ssl": "node src/index.js resources/restssl.json",
     "start:dev": "nodemon src/index.js resources/restDEV.json",
+    "swagger-autogen": "node ./swaggerbuild.js",
     "test": "mocha --full-trace --recursive",
     "test:coverage": "nyc npm test && nyc report --reporter=text-lcov",
     "test:jenkins": "cross-env JUNIT_REPORT_PATH=test-results.xml mocha --reporter mocha-jenkins-reporter --mongoHost db --forbid-only --full-trace --recursive test || exit 0",
@@ -15,7 +16,6 @@
     "lint": "eslint src test",
     "lint:fix": "eslint src test --fix",
     "lint:jenkins": "eslint -o tests.bitxorcore.lint.xml -f junit src test || exit 0"
-    
   },
   "keywords": [],
   "author": "",
@@ -37,10 +37,11 @@
     "nodemon": "^2.0.6",
     "nyc": "^14.1.1",
     "rimraf": "^2.6.3",
-    "sinon": "^7.3.2"
+    "sinon": "^7.3.2",
+    "swagger-autogen": "^2.23.1"
   },
   "dependencies": {
-    "bitxorcore-sdk": "link:../bitxorcore-sdk",
+    "bitxorcore-sdk": "../bitxorcore-sdk",
     "ini": "^1.3.5",
     "mongodb": "^3.3.0-beta2",
     "restify": "^8.3.3",
