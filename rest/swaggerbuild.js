@@ -5,8 +5,8 @@ const doc = {
     title: 'Bitxor Api-Rest Swagger',
     description: 'Bitxor Api-Rest Swagger',
   },
-  host: 'alfa.bitxor.knodo.net:3000',
-  schemes: ['http'],
+  host: 'genesis.bitxor.org:3001',
+  schemes: ['https'],
 };
 
 const outputFile = '../swagger-output.json';

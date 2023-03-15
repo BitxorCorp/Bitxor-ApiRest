@@ -5,10 +5,10 @@
     "description": "Bitxor Api-Rest Swagger",
     "version": "1.0.0"
   },
-  "host": "alfa.bitxor.knodo.net:3000",
+  "host": "genesis.bitxor.org:3001",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/accounts": {
